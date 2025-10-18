@@ -158,27 +158,54 @@ footer {
   font-size: 14px;
 }
 
+/* Hide bullet points and style participant items as pill-like blocks with delete icon */
 .participants-list {
-  list-style: disc;
-  padding-left: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  padding-left: 0;
   margin: 0;
   max-height: 140px;
   overflow-y: auto;
 }
 
 .participant-item {
-  padding: 6px 4px;
+  display: inline-flex;
+  align-items: center;
+  background: #eef0ff;
+  border-radius: 16px;
+  padding: 6px 12px 6px 10px;
+  margin-bottom: 4px;
   font-size: 14px;
   color: #222;
-  border-bottom: 1px dashed #f0f0f5;
+  border: 1px solid #dbe3ff;
+  box-shadow: 0 1px 2px rgba(0,0,0,0.03);
+  transition: background 0.2s;
 }
 
-.participant-item:last-child {
-  border-bottom: none;
+.participant-item:hover {
+  background: #e3e7ff;
+}
+
+.participant-email {
+  margin-right: 8px;
+}
+
+.delete-participant {
+  cursor: pointer;
+  color: #c62828;
+  font-size: 16px;
+  margin-left: 2px;
+  padding: 2px 4px;
+  border-radius: 50%;
+  transition: background 0.2s;
+}
+
+.delete-participant:hover {
+  background: #ffebee;
 }
 
 .no-participants {
-  list-style: none;
   color: #6b6b6b;
   font-style: italic;
   padding: 4px 0;
